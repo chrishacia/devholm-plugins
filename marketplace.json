@@ -1,0 +1,46 @@
+{
+  "name": "DevHolm Plugin Marketplace",
+  "schemaVersion": "1.0.0-skeleton",
+  "status": "static-scaffold",
+  "generated": false,
+  "runtimeInstallSupported": false,
+  "bundledFallbackRequired": true,
+  "plugins": [
+    {
+      "pluginId": "calendar",
+      "displayName": "Calendar",
+      "description": "Marketplace package scaffold for the Calendar stock plugin.",
+      "path": "plugins/calendar",
+      "manifestPath": "plugins/calendar/manifest.json",
+      "readmePath": "plugins/calendar/README.md",
+      "landingPage": "plugins/calendar/index.html",
+      "packageStatus": "scaffold-only",
+      "runtimeInstallSupported": false,
+      "bundledFallbackRequired": true
+    },
+    {
+      "pluginId": "gallery",
+      "displayName": "Gallery",
+      "description": "Marketplace package scaffold for the Gallery stock plugin.",
+      "path": "plugins/gallery",
+      "manifestPath": "plugins/gallery/manifest.json",
+      "readmePath": "plugins/gallery/README.md",
+      "landingPage": "plugins/gallery/index.html",
+      "packageStatus": "scaffold-only",
+      "runtimeInstallSupported": false,
+      "bundledFallbackRequired": true
+    },
+    {
+      "pluginId": "url-shortener",
+      "displayName": "URL Shortener",
+      "description": "Marketplace package scaffold for the URL Shortener stock plugin.",
+      "path": "plugins/url-shortener",
+      "manifestPath": "plugins/url-shortener/manifest.json",
+      "readmePath": "plugins/url-shortener/README.md",
+      "landingPage": "plugins/url-shortener/index.html",
+      "packageStatus": "scaffold-only",
+      "runtimeInstallSupported": false,
+      "bundledFallbackRequired": true
+    }
+  ]
+}
