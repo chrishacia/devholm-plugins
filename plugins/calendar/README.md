@@ -12,3 +12,7 @@ Future expected package contents:
 - docs/ or doc.html
 - assets/
 - fixtures/
+
+See also:
+- ../../docs/package-contract.md
+- ../../docs/validation.md

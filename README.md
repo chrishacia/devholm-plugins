@@ -20,3 +20,7 @@ Initial stock plugin package candidates:
 Important:
 - DevHolm runtime installation from this repository is not enabled yet.
 - This scaffold does not imply runtime install readiness.
+
+Documentation:
+- docs/package-contract.md
+- docs/validation.md
