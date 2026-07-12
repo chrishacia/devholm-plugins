@@ -89,15 +89,15 @@ Current status values:
 `marketplace.json` now includes preparatory contract fields used by DevHolm-side validation:
 
 - installReadiness
-	- catalog-contract-ready in this phase
-	- production-eligible is not used in this repository yet
+  - catalog-contract-ready in this phase
+  - production-eligible is not used in this repository yet
 - publisher
-	- first-party metadata classification only
+  - first-party metadata classification only
 - artifact
-	- format: tar.gz
-	- readiness: planned
-	- immutable: false
-	- signature.status: not-provided
+  - format: tar.gz
+  - readiness: planned
+  - immutable: false
+  - signature.status: not-provided
 
 In this phase, planned artifacts intentionally omit:
 
@@ -106,6 +106,14 @@ In this phase, planned artifacts intentionally omit:
 - compressed and uncompressed size declarations
 
 These values must not be fabricated before real immutable artifacts exist.
+
+## Issue #66 signing contract reference
+
+The first-party artifact signing contract is documented in:
+
+- docs/artifact-signing-contract.md
+
+This reference documents canonical payload expectations, signature envelope fields, trusted key policy, rotation and revocation behavior, and private-key handling boundaries for future production-eligible artifacts.
 
 ## Immutable artifact policy (future-ready)
 
@@ -129,6 +137,7 @@ scaffold-only means:
 - static pages and docs are present
 - no runtime install/fetch behavior is enabled
 - no lifecycle/migration/runtime ownership behavior is changed
+- no private signing keys are stored in this repository
 
 ## Explicit non-goals
 
@@ -139,5 +148,6 @@ This pass does not:
 - add lifecycle or migration behavior changes
 - publish runtime-installable artifacts
 - add package publishing automation
-- add checksum/signature enforcement
+- add checksum/signature enforcement in this repository's current scaffold entries
 - claim production marketplace install readiness
+- add private-key signing material

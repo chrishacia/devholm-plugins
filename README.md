@@ -11,6 +11,7 @@ Phase 5A catalog status:
 - catalog metadata includes first-party publisher and artifact-reference contract fields
 - artifact records remain `readiness: planned`
 - no artifact URLs, checksums, or runtime install execution are enabled in this repository
+- signing contract and key policy are documented for future production artifact publication
 
 Selected package path shape:
 - plugins/<plugin-id>
@@ -30,3 +31,4 @@ Important:
 Documentation:
 - docs/package-contract.md
 - docs/validation.md
+- docs/artifact-signing-contract.md

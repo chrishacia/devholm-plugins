@@ -2,6 +2,7 @@
   "name": "DevHolm Plugin Marketplace",
   "schemaVersion": "1.0.0-skeleton",
   "catalogContractVersion": "phase5a-v1",
+  "artifactSigningContractVersion": "issue66-v1",
   "status": "static-scaffold",
   "generated": false,
   "artifactHostModel": "metadata-only",
