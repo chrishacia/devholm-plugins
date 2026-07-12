@@ -1,8 +1,11 @@
 {
   "name": "DevHolm Plugin Marketplace",
   "schemaVersion": "1.0.0-skeleton",
+  "catalogContractVersion": "phase5a-v1",
   "status": "static-scaffold",
   "generated": false,
+  "artifactHostModel": "metadata-only",
+  "runtimeArtifactFetchEnabled": false,
   "runtimeInstallSupported": false,
   "bundledFallbackRequired": true,
   "plugins": [
@@ -15,8 +18,21 @@
       "readmePath": "plugins/calendar/README.md",
       "landingPage": "plugins/calendar/index.html",
       "packageStatus": "scaffold-only",
+      "installReadiness": "catalog-contract-ready",
       "runtimeInstallSupported": false,
-      "bundledFallbackRequired": true
+      "bundledFallbackRequired": true,
+      "publisher": {
+        "publisherId": "devholm-first-party",
+        "classification": "first-party"
+      },
+      "artifact": {
+        "format": "tar.gz",
+        "readiness": "planned",
+        "immutable": false,
+        "signature": {
+          "status": "not-provided"
+        }
+      }
     },
     {
       "pluginId": "gallery",
@@ -27,8 +43,21 @@
       "readmePath": "plugins/gallery/README.md",
       "landingPage": "plugins/gallery/index.html",
       "packageStatus": "scaffold-only",
+      "installReadiness": "catalog-contract-ready",
       "runtimeInstallSupported": false,
-      "bundledFallbackRequired": true
+      "bundledFallbackRequired": true,
+      "publisher": {
+        "publisherId": "devholm-first-party",
+        "classification": "first-party"
+      },
+      "artifact": {
+        "format": "tar.gz",
+        "readiness": "planned",
+        "immutable": false,
+        "signature": {
+          "status": "not-provided"
+        }
+      }
     },
     {
       "pluginId": "url-shortener",
@@ -39,8 +68,21 @@
       "readmePath": "plugins/url-shortener/README.md",
       "landingPage": "plugins/url-shortener/index.html",
       "packageStatus": "scaffold-only",
+      "installReadiness": "catalog-contract-ready",
       "runtimeInstallSupported": false,
-      "bundledFallbackRequired": true
+      "bundledFallbackRequired": true,
+      "publisher": {
+        "publisherId": "devholm-first-party",
+        "classification": "first-party"
+      },
+      "artifact": {
+        "format": "tar.gz",
+        "readiness": "planned",
+        "immutable": false,
+        "signature": {
+          "status": "not-provided"
+        }
+      }
     }
   ]
 }

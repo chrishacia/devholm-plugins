@@ -6,6 +6,7 @@ Current phase status:
 - static scaffold only
 - runtime marketplace install is not enabled
 - bundled fallback in DevHolm remains required
+- Phase 5A catalog/artifact contract fields are metadata-only
 
 ## Package root shape
 
@@ -83,6 +84,39 @@ Current status values:
 Current status values:
 - runtimeInstallSupported: false means DevHolm does not install plugins from this repository yet
 
+## Phase 5A catalog contract fields
+
+`marketplace.json` now includes preparatory contract fields used by DevHolm-side validation:
+
+- installReadiness
+	- catalog-contract-ready in this phase
+	- production-eligible is not used in this repository yet
+- publisher
+	- first-party metadata classification only
+- artifact
+	- format: tar.gz
+	- readiness: planned
+	- immutable: false
+	- signature.status: not-provided
+
+In this phase, planned artifacts intentionally omit:
+
+- artifactUrl
+- sha256 checksum
+- compressed and uncompressed size declarations
+
+These values must not be fabricated before real immutable artifacts exist.
+
+## Immutable artifact policy (future-ready)
+
+When a plugin is promoted to production-eligible in a later phase, artifact metadata must include:
+
+- immutable artifact URL (HTTPS)
+- SHA-256 digest
+- semver-aligned version identity
+
+Mutable branch references are not valid production artifact identities.
+
 ## Bundled fallback expectations
 
 Current status values:
@@ -103,6 +137,7 @@ This pass does not:
 - add runtime fetch/install logic
 - add admin endpoint behavior changes
 - add lifecycle or migration behavior changes
+- publish runtime-installable artifacts
 - add package publishing automation
 - add checksum/signature enforcement
 - claim production marketplace install readiness

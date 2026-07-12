@@ -37,6 +37,25 @@ From marketplace.json, verify each plugin entry has existing paths:
 - landingPage
 - readmePath
 
+## Phase 5A catalog contract checks
+
+For each plugin entry verify:
+
+- installReadiness is `catalog-contract-ready`
+- publisher.classification is `first-party`
+- publisher.publisherId is present
+- artifact.format is `tar.gz`
+- artifact.readiness is `planned`
+- artifact.immutable is `false`
+- artifact.signature.status is `not-provided`
+
+For this phase, verify these keys are not populated with placeholder runtime values:
+
+- artifact.artifactUrl
+- artifact.sha256
+- artifact.compressedSizeBytes
+- artifact.maxUncompressedSizeBytes
+
 ## Relative link sanity
 
 Verify links in:
