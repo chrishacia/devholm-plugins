@@ -56,6 +56,29 @@ For this phase, verify these keys are not populated with placeholder runtime val
 - artifact.compressedSizeBytes
 - artifact.maxUncompressedSizeBytes
 
+## Issue #66 signing contract checks
+
+Reference:
+- docs/artifact-signing-contract.md
+
+For scaffold entries in this repository today, verify:
+
+- installReadiness remains `catalog-contract-ready`
+- artifact.readiness remains `planned`
+- artifact.signature.status remains `not-provided`
+- no fabricated signature material is present
+
+For future production-eligible entries, verify contract completeness before claiming runtime readiness:
+
+- artifact.signature.algorithm is `Ed25519`
+- artifact.signature.keyId is present
+- artifact.signature.signedPayloadVersion is `v1`
+- artifact.signature.signature is present
+- artifact.signature.signedAt is a valid ISO timestamp
+- immutable artifact URL and SHA-256 are present
+
+Do not mark any scaffold entry production-eligible unless real immutable artifacts and signatures exist.
+
 ## Relative link sanity
 
 Verify links in:
@@ -71,6 +94,8 @@ Verify no runtime install behavior was introduced:
 - no install commands
 - no fetch/network behavior
 - no claims that runtime install is currently supported
+- no production private signing keys
+- no generated private key fixtures committed to this repository
 
 ## Required metadata guard values
 
