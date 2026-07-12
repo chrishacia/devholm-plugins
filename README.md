@@ -7,6 +7,11 @@ Current status:
 - not yet used for runtime plugin installation
 - bundled fallback in DevHolm remains authoritative
 
+Phase 5A catalog status:
+- catalog metadata includes first-party publisher and artifact-reference contract fields
+- artifact records remain `readiness: planned`
+- no artifact URLs, checksums, or runtime install execution are enabled in this repository
+
 Selected package path shape:
 - plugins/<plugin-id>
 
@@ -20,6 +25,7 @@ Initial stock plugin package candidates:
 Important:
 - DevHolm runtime installation from this repository is not enabled yet.
 - This scaffold does not imply runtime install readiness.
+- The catalog contract is preparatory metadata only until immutable release artifacts are published.
 
 Documentation:
 - docs/package-contract.md
