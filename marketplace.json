@@ -5,6 +5,8 @@
   "artifactSigningContractVersion": "issue66-v1",
   "status": "static-scaffold",
   "generated": false,
+  "sourceOfTruth": "scripts/catalog-data.mjs",
+  "generatedOutputs": ["dist/marketplace.json", "dist/index.html", "dist/plugins/**", "dist/styles.css", "dist/404.html"],
   "artifactHostModel": "metadata-only",
   "runtimeArtifactFetchEnabled": false,
   "runtimeInstallSupported": false,
@@ -13,7 +15,7 @@
     {
       "pluginId": "calendar",
       "displayName": "Calendar",
-      "description": "Marketplace package scaffold for the Calendar stock plugin.",
+      "description": "Lifecycle-managed ownership boundary for Calendar surfaces and data.",
       "path": "plugins/calendar",
       "manifestPath": "plugins/calendar/manifest.json",
       "readmePath": "plugins/calendar/README.md",
@@ -38,7 +40,7 @@
     {
       "pluginId": "gallery",
       "displayName": "Gallery",
-      "description": "Marketplace package scaffold for the Gallery stock plugin.",
+      "description": "Lifecycle-managed ownership boundary for Gallery surfaces and media references.",
       "path": "plugins/gallery",
       "manifestPath": "plugins/gallery/manifest.json",
       "readmePath": "plugins/gallery/README.md",
@@ -63,7 +65,7 @@
     {
       "pluginId": "url-shortener",
       "displayName": "URL Shortener",
-      "description": "Marketplace package scaffold for the URL Shortener stock plugin.",
+      "description": "Plugin-owned short-link routing, admin surfaces, and analytics foundation.",
       "path": "plugins/url-shortener",
       "manifestPath": "plugins/url-shortener/manifest.json",
       "readmePath": "plugins/url-shortener/README.md",

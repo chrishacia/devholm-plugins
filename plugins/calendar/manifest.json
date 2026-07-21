@@ -1,0 +1,89 @@
+{
+  "pluginId": "calendar",
+  "displayName": "Calendar",
+  "version": "0.1.0",
+  "summary": "Calendar surfaces, public booking, and admin management metadata.",
+  "description": "Lifecycle-managed ownership boundary for Calendar surfaces and data.",
+  "packageStatus": "scaffold-only",
+  "runtimeInstallSupported": false,
+  "bundledFallbackRequired": true,
+  "publisher": {
+    "publisherId": "devholm-first-party",
+    "classification": "first-party"
+  },
+  "source": {
+    "sourceType": "bundled",
+    "repositoryUrl": "https://github.com/chrishacia/devholm-plugins",
+    "ref": "main"
+  },
+  "permissions": {
+    "permissionKeys": [
+      "plugin:calendar:admin.manage",
+      "plugin:calendar:public.view",
+      "plugin:calendar:public.book",
+      "plugin:calendar:embed.view"
+    ],
+    "scopes": [
+      "admin",
+      "public",
+      "public",
+      "future"
+    ],
+    "capabilities": [
+      "calendar.admin-management",
+      "calendar.public-viewing",
+      "calendar.public-booking",
+      "calendar.embed-usage"
+    ]
+  },
+  "lifecycle": {
+    "hasAfterInstall": true,
+    "hasAfterUpgrade": true,
+    "hasBeforeDisable": true,
+    "hasBeforeUninstall": true,
+    "hasPurge": true,
+    "disablePolicy": "non-destructive",
+    "uninstallPolicy": "non-destructive",
+    "dataRetention": "retain-all-calendar-data"
+  },
+  "migration": {
+    "count": 1,
+    "policy": "declared"
+  },
+  "surfaces": {
+    "adminPageHrefs": [
+      "/admin/calendar"
+    ],
+    "publicRouteExtensionIds": [
+      "calendar:public-routes"
+    ],
+    "apiPaths": [
+      "/api/calendar",
+      "/api/admin/calendar"
+    ],
+    "settingKeys": [
+      "plugin:calendar:baseline-schema-version",
+      "plugin:calendar:lifecycle:data-retention-policy",
+      "plugin:calendar:lifecycle:uninstall-policy",
+      "plugin:calendar:lifecycle:purge-policy"
+    ]
+  },
+  "presentation": {
+    "capabilitySummary": [
+      "Admin management",
+      "Public viewing",
+      "Public booking",
+      "Embed usage metadata"
+    ],
+    "compatibility": "DevHolm ^3.6.0",
+    "trustDisclosure": "GitHub Pages is presentation only. DevHolm validates trust, digest, and install eligibility."
+  },
+  "artifact": {
+    "format": "tar.gz",
+    "readiness": "planned",
+    "immutable": false,
+    "signature": {
+      "status": "not-provided"
+    }
+  }
+}

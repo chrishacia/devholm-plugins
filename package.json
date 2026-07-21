@@ -1,0 +1,13 @@
+{
+  "name": "devholm-plugin-marketplace",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node test/marketplace-contract.test.mjs",
+    "build": "node scripts/build-site.mjs",
+    "validate": "node scripts/validate-marketplace.mjs",
+    "validate:dist": "node scripts/validate-generated-site.mjs",
+    "validate:devholm": "node scripts/validate-devholm-parity.mjs",
+    "check": "npm test && npm run validate && npm run validate:devholm && npm run build && npm run validate:dist"
+  }
+}
