@@ -3,18 +3,67 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>DevHolm Plugin Marketplace Scaffold</title>
+    <title>DevHolm Plugin Marketplace</title>
+    <meta
+      name="description"
+      content="Presentation-only GitHub Pages catalog for DevHolm first-party plugins."
+    />
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <main>
-      <h1>DevHolm Plugin Marketplace</h1>
-      <p>This marketplace is currently static/docs-only.</p>
-      <p>Runtime plugin installation from this repository is not enabled yet.</p>
-      <ul>
-        <li><a href="plugins/calendar/index.html">Calendar</a></li>
-        <li><a href="plugins/gallery/index.html">Gallery</a></li>
-        <li><a href="plugins/url-shortener/index.html">URL Shortener</a></li>
-      </ul>
+    <header class="site-header">
+      <div class="brand">DevHolm Marketplace</div>
+      <nav aria-label="Marketplace navigation"><a href="#catalog">Catalog</a></nav>
+    </header>
+    <main class="page">
+      <section class="hero">
+        <p class="eyebrow">GitHub Pages presentation layer</p>
+        <h1>First-party plugin catalog and landing pages</h1>
+        <p class="lede">
+          Browse Calendar, Gallery, and URL Shortener. Pages is for discovery and documentation;
+          DevHolm remains the trust authority for digest, signature, and install verification.
+        </p>
+      </section>
+
+      <section id="catalog" class="grid" aria-labelledby="catalog-title">
+        <h2 id="catalog-title" class="sr-only">Catalog</h2>
+        <article class="card">
+          <div class="eyebrow">first-party</div>
+          <h2><a href="plugins/calendar/index.html">Calendar</a></h2>
+          <p>Lifecycle-managed ownership boundary for Calendar surfaces and data.</p>
+          <dl>
+            <div><dt>Version</dt><dd>0.1.0</dd></div>
+            <div><dt>Path</dt><dd>plugins/calendar</dd></div>
+            <div><dt>Artifact</dt><dd>tar.gz / planned</dd></div>
+            <div><dt>Publisher</dt><dd>devholm-first-party</dd></div>
+          </dl>
+          <p class="meta">Presentation only. DevHolm validates trust and install eligibility.</p>
+        </article>
+        <article class="card">
+          <div class="eyebrow">first-party</div>
+          <h2><a href="plugins/gallery/index.html">Gallery</a></h2>
+          <p>Lifecycle-managed ownership boundary for Gallery surfaces and media references.</p>
+          <dl>
+            <div><dt>Version</dt><dd>0.1.0</dd></div>
+            <div><dt>Path</dt><dd>plugins/gallery</dd></div>
+            <div><dt>Artifact</dt><dd>tar.gz / planned</dd></div>
+            <div><dt>Publisher</dt><dd>devholm-first-party</dd></div>
+          </dl>
+          <p class="meta">Presentation only. DevHolm validates trust and install eligibility.</p>
+        </article>
+        <article class="card">
+          <div class="eyebrow">first-party</div>
+          <h2><a href="plugins/url-shortener/index.html">URL Shortener</a></h2>
+          <p>Plugin-owned short-link routing, admin surfaces, and analytics foundation.</p>
+          <dl>
+            <div><dt>Version</dt><dd>0.1.0</dd></div>
+            <div><dt>Path</dt><dd>plugins/url-shortener</dd></div>
+            <div><dt>Artifact</dt><dd>tar.gz / planned</dd></div>
+            <div><dt>Publisher</dt><dd>devholm-first-party</dd></div>
+          </dl>
+          <p class="meta">Presentation only. DevHolm validates trust and install eligibility.</p>
+        </article>
+      </section>
     </main>
   </body>
 </html>

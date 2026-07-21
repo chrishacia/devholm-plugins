@@ -1,0 +1,85 @@
+{
+  "pluginId": "url-shortener",
+  "displayName": "URL Shortener",
+  "version": "0.1.0",
+  "summary": "Short-link routing, admin surfaces, and analytics metadata.",
+  "description": "Plugin-owned short-link routing, admin surfaces, and analytics foundation.",
+  "packageStatus": "scaffold-only",
+  "runtimeInstallSupported": false,
+  "bundledFallbackRequired": true,
+  "publisher": {
+    "publisherId": "devholm-first-party",
+    "classification": "first-party"
+  },
+  "source": {
+    "sourceType": "bundled",
+    "repositoryUrl": "https://github.com/chrishacia/devholm-plugins",
+    "ref": "main"
+  },
+  "permissions": {
+    "permissionKeys": [
+      "plugin:url-shortener:admin.manage",
+      "plugin:url-shortener:public.redirect"
+    ],
+    "scopes": [
+      "admin",
+      "public"
+    ],
+    "capabilities": [
+      "url-shortener.admin-management",
+      "url-shortener.public-routing"
+    ]
+  },
+  "lifecycle": {
+    "hasAfterInstall": false,
+    "hasAfterUpgrade": false,
+    "hasBeforeDisable": false,
+    "hasBeforeUninstall": false,
+    "hasPurge": true,
+    "disablePolicy": "non-destructive",
+    "uninstallPolicy": "non-destructive"
+  },
+  "migration": {
+    "count": 1,
+    "policy": "declared"
+  },
+  "surfaces": {
+    "adminPageHrefs": [
+      "/admin/url-shortener/overview",
+      "/admin/url-shortener/links",
+      "/admin/url-shortener/analytics",
+      "/admin/url-shortener/public-submissions",
+      "/admin/url-shortener/settings"
+    ],
+    "publicRouteExtensionIds": [
+      "url-shortener:redirect"
+    ],
+    "apiPaths": [
+      "/api/url-shortener",
+      "/api/admin/url-shortener"
+    ],
+    "settingKeys": [
+      "plugin:url-shortener:route-prefix",
+      "plugin:url-shortener:public-creation-mode",
+      "plugin:url-shortener:legacy-prefix-enabled"
+    ]
+  },
+  "presentation": {
+    "capabilitySummary": [
+      "Admin management",
+      "Public redirect routing",
+      "Analytics foundation",
+      "Submission workflow metadata"
+    ],
+    "compatibility": "DevHolm ^3.6.0",
+    "trustDisclosure": "GitHub Pages is presentation only. DevHolm validates trust, digest, and install eligibility."
+  },
+  "artifact": {
+    "format": "tar.gz",
+    "readiness": "planned",
+    "immutable": false,
+    "signature": {
+      "status": "not-provided"
+    }
+  }
+}

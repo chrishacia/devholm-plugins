@@ -1,0 +1,83 @@
+{
+  "pluginId": "gallery",
+  "displayName": "Gallery",
+  "version": "0.1.0",
+  "summary": "Gallery collections, public viewing, and admin media metadata.",
+  "description": "Lifecycle-managed ownership boundary for Gallery surfaces and media references.",
+  "packageStatus": "scaffold-only",
+  "runtimeInstallSupported": false,
+  "bundledFallbackRequired": true,
+  "publisher": {
+    "publisherId": "devholm-first-party",
+    "classification": "first-party"
+  },
+  "source": {
+    "sourceType": "bundled",
+    "repositoryUrl": "https://github.com/chrishacia/devholm-plugins",
+    "ref": "main"
+  },
+  "permissions": {
+    "permissionKeys": [
+      "plugin:gallery:admin.manage",
+      "plugin:gallery:public.view"
+    ],
+    "scopes": [
+      "admin",
+      "public"
+    ],
+    "capabilities": [
+      "gallery.admin-management",
+      "gallery.public-viewing"
+    ]
+  },
+  "lifecycle": {
+    "hasAfterInstall": true,
+    "hasAfterUpgrade": true,
+    "hasBeforeDisable": true,
+    "hasBeforeUninstall": true,
+    "hasPurge": true,
+    "disablePolicy": "non-destructive",
+    "uninstallPolicy": "non-destructive",
+    "dataRetention": "retain-all-calendar-data"
+  },
+  "migration": {
+    "count": 1,
+    "policy": "declared"
+  },
+  "surfaces": {
+    "adminPageHrefs": [
+      "/admin/gallery"
+    ],
+    "publicRouteExtensionIds": [
+      "gallery:public-routes"
+    ],
+    "apiPaths": [
+      "/api/gallery",
+      "/api/admin/gallery"
+    ],
+    "settingKeys": [
+      "plugin:gallery:baseline-schema-version",
+      "plugin:gallery:lifecycle:data-retention-policy",
+      "plugin:gallery:lifecycle:uninstall-policy",
+      "plugin:gallery:lifecycle:purge-policy"
+    ]
+  },
+  "presentation": {
+    "capabilitySummary": [
+      "Admin management",
+      "Public viewing",
+      "Item ordering",
+      "Media reference support metadata"
+    ],
+    "compatibility": "DevHolm ^3.6.0",
+    "trustDisclosure": "GitHub Pages is presentation only. DevHolm validates trust, digest, and install eligibility."
+  },
+  "artifact": {
+    "format": "tar.gz",
+    "readiness": "planned",
+    "immutable": false,
+    "signature": {
+      "status": "not-provided"
+    }
+  }
+}

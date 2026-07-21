@@ -1,34 +1,30 @@
-# DevHolm Plugin Marketplace Scaffold
+# DevHolm Plugin Marketplace
 
-This repository is the DevHolm plugin marketplace scaffold for issue #49.
+This repository publishes the GitHub Pages presentation layer for the DevHolm first-party plugin catalog.
 
-Current status:
-- static/docs-only
-- not yet used for runtime plugin installation
-- bundled fallback in DevHolm remains authoritative
+Source of truth:
+- `scripts/catalog-data.mjs` for canonical plugin metadata
+- `marketplace.json` for the scaffold contract surface
+- generated `dist/` output for Pages publication
 
-Phase 5A catalog status:
-- catalog metadata includes first-party publisher and artifact-reference contract fields
-- artifact records remain `readiness: planned`
-- no artifact URLs, checksums, or runtime install execution are enabled in this repository
-- signing contract and key policy are documented for future production artifact publication
+Generated from canonical data:
+- root catalog page
+- plugin landing pages
+- source package manifests
+- published catalog JSON
 
-Selected package path shape:
-- plugins/<plugin-id>
+Trust boundary:
+- GitHub Pages is discovery and presentation only
+- DevHolm remains the authority for digest verification, signature verification, publisher policy, and install authorization
 
-This aligns with merged DevHolm marketplace contract work from PR #50 and PR #51.
-
-Initial stock plugin package candidates:
-- calendar
-- gallery
-- url-shortener
-
-Important:
-- DevHolm runtime installation from this repository is not enabled yet.
-- This scaffold does not imply runtime install readiness.
-- The catalog contract is preparatory metadata only until immutable release artifacts are published.
+Issue #102 status:
+- Calendar, Gallery, and URL Shortener are the only first-party catalog entries
+- artifact metadata remains planned and non-runtime
+- no install-ready artifact data is fabricated
 
 Documentation:
 - docs/package-contract.md
 - docs/validation.md
 - docs/artifact-signing-contract.md
+- docs/pages-contract.md
+- docs/catalog-schema.md
