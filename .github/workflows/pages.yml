@@ -30,6 +30,9 @@ jobs:
       - name: Validate marketplace catalog
         run: npm run validate
 
+      - name: Verify test layout
+        run: npm run test:layout
+
       - name: Run contract tests
         run: npm test
 
