@@ -25,6 +25,7 @@ Issue #102 status:
 Documentation:
 - docs/package-contract.md
 - docs/validation.md
+- docs/TESTING.md
 - docs/artifact-signing-contract.md
 - docs/pages-contract.md
 - docs/catalog-schema.md
